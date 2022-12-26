@@ -1,0 +1,6 @@
+.intro__textbox {
+  max-width: 504px;
+  min-height: 376px;
+  display: flex;
+  flex-direction: column;
+}

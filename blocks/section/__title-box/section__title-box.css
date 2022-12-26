@@ -1,0 +1,7 @@
+.section__title-box {
+  width: 100%;
+  min-height: 98px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

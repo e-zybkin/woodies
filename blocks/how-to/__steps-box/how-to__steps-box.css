@@ -1,0 +1,5 @@
+.how-to__steps-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 64px 0;
+}

@@ -1,0 +1,7 @@
+.section{
+  box-sizing: border-box;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: relative;
+  margin-top: 120px;
+}

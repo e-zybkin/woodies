@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Mesto</title>
+    <title>Woodies</title>
   </head>
   <body>
     <div class="page">
@@ -29,7 +29,7 @@
         <main>
           <section class="intro section">
             <div class="intro__textbox">
-              <p class="intro__slogan">Are you looking for woodden furniture for your place?</p>
+              <p class="intro__slogan">Are you looking for <b>woodden furniture</b> for your place?</p>
               <h1 class="intro__title">This is the Right Place</h1>
               <button class="intro__button">Explore Furniture</button>
             </div>
@@ -38,148 +38,158 @@
               src="./images/coffeTable.png"
               alt="кофейный столик"
             >
+            <img
+              class="intro__back"
+              src="./images/bigPinkRectangle.png"
+              alt="розовый прямоугольник"
+            >
           </section>
 
           <section class="about-us section">
-            <h2 class="about-us__title">Who we are</h2>
-            <p class="about-us__name section__part">ABOUT US</p>
-            <img
-              class="about-us__pic"
-              src="./images/saladBowlSet.png"
-              alt="чашки с салатом"
-            >
-            <h2 class="about-us__slogan">WOODIES is the home of modern wooden furniture</h2>
-            <p class="about-us__text">the answer to your need for furniture with shapes, sizes and colors.</p>
-            <h2 class="about-us__slogan">Customized furniture made just for you</h2>
-            <p class="about-us__text">Get it easy to adjust furniture to the shape and size of your dwelling or business.</p>
-            <img
-              class="about-us__pic"
-              src="./images/spoonSet.png"
-              alt="комплект ложек"
-            >
+            <div class="section__title-box">
+              <h2 class="section__title">Who we are</h2>
+              <p class="section__subtitle">ABOUT US</p>
+            </div>
+
+            <div class="about-us__woodies">
+              <img
+                class="about-us__salad-pic"
+                src="./images/saladBowlSet.png"
+                alt="чашки с салатом"
+              >
+              <div class="about-us__woodies-textbox">
+                <h2 class="about-us__slogan"><b>WOODIES</b> is the <b>home of modern wooden furniture</b></h2>
+                <p class="about-us__text">the answer to your need for furniture with shapes, sizes and colors.</p>
+              </div>
+            </div>
+
+            <div class="about-us__custom">
+              <div class="about-us__custom-textbox">
+                <h2 class="about-us__slogan">Customized furniture <b>made just for you</b></h2>
+                <p class="about-us__text">Get it easy to adjust furniture to the shape and size of your dwelling or business.</p>
+              </div>
+              <img
+                class="about-us__spoon-pic"
+                src="./images/spoonSet.png"
+                alt="комплект ложек"
+              >
+            </div>
+
           </section>
 
           <section class="how-to section">
-            <div class="how-to__title-box">
-              <h2 class="how-to__title"></h2>
-              <p class="how-to__name section__part"></p>
+            <div class="section__title-box">
+              <h2 class="section__title">How to custom</h2>
+              <p class="section__subtitle">HOW IT WORKS</p>
             </div>
+
             <div class="how-to__steps-box">
               <div class="how-to__step-card">
-                <p class="how-to__num"></p>
+                <p class="how-to__num">1</p>
                 <img
                   class="how-to__pic"
-                  src=""
-                  alt=""
+                  src="./images/shop.png"
+                  alt="интернет магазин"
                 >
-                <p class="how-to__text"></p>
+                <p class="how-to__text">Choose Design</p>
               </div>
 
               <div class="how-to__step-card">
-                <p class="how-to__num"></p>
+                <p class="how-to__num">2</p>
                 <img
                   class="how-to__pic"
-                  src=""
-                  alt=""
+                  src="./images/ruler.png"
+                  alt="угол"
                 >
-                <p class="how-to__text"></p>
+                <p class="how-to__text">Area measuring</p>
               </div>
 
               <div class="how-to__step-card">
-                <p class="how-to__num"></p>
+                <p class="how-to__num">3</p>
                 <img
                   class="how-to__pic"
-                  src=""
-                  alt=""
+                  src="./images/cost.png"
+                  alt="ведение бюджета"
                 >
-                <p class="how-to__text"></p>
+                <p class="how-to__text">Budgeting</p>
               </div>
 
               <div class="how-to__step-card">
-                <p class="how-to__num"></p>
+                <p class="how-to__num">4</p>
                 <img
                   class="how-to__pic"
-                  src=""
-                  alt=""
+                  src="./images/carpenter.png"
+                  alt="столяр"
                 >
-                <p class="how-to__text"></p>
-              </div>
-
-              <div class="how-to__step-card">
-                <p class="how-to__num"></p>
-                <img
-                  class="how-to__pic"
-                  src=""
-                  alt=""
-                >
-                <p class="how-to__text"></p>
+                <p class="how-to__text">Production</p>
               </div>
             </div>
-            <button class="how-to__button"></button>
+            <button class="how-to__button">Get Personalized Now</button>
           </section>
 
-          <section class="categories">
-            <div class="categories__title-box">
-              <h2 class="categories__title">What we have</h2>
-              <p class="categories__name">CATEGORIES</p>
+          <section class="categories section">
+            <div class="section__title-box">
+              <h2 class="section__title">What we have</h2>
+              <p class="section__subtitle">CATEGORIES</p>
             </div>
+
             <div class="categories__card-box">
               <div class="categories__card">
-                <h3 class="categories__card-title"></h3>
+                <h3 class="categories__card-title">Desk</h3>
                 <img
                   class="categories__card-pic"
-                  src=""
-                  alt=""
+                  src="./images/table.png"
+                  alt="стол"
                 >
-                <button class="categories__card-button"></button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
 
             <div class="categories__card-box">
               <div class="categories__card">
-                <h3 class="categories__card-title"></h3>
+                <h3 class="categories__card-title">Chair</h3>
                 <img
                   class="categories__card-pic"
-                  src=""
-                  alt=""
+                  src="./images/chair.png"
+                  alt="стул"
                 >
-                <button class="categories__card-button"></button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
 
             <div class="categories__card-box">
               <div class="categories__card">
-                <h3 class="categories__card-title"></h3>
+                <h3 class="categories__card-title">Kitchenware</h3>
                 <img
                   class="categories__card-pic"
-                  src=""
-                  alt=""
+                  src="./images/Bowls.png"
+                  alt="тарелки"
                 >
-                <button class="categories__card-button"></button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
 
             <div class="categories__card-box">
               <div class="categories__card">
-                <h3 class="categories__card-title"></h3>
+                <h3 class="categories__card-title">Book Shelf</h3>
                 <img
                   class="categories__card-pic"
-                  src=""
-                  alt=""
+                  src="./images/bookcase.png"
+                  alt="книжный шкаф"
                 >
-                <button class="categories__card-button"></button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
 
             <div class="categories__card-box">
               <div class="categories__card">
-                <h3 class="categories__card-title"></h3>
+                <h3 class="categories__card-title">Electronics</h3>
                 <img
                   class="categories__card-pic"
-                  src=""
-                  alt=""
+                  src="./images/radio.png"
+                  alt="радиоприёмник"
                 >
-                <button class="categories__card-button"></button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
           </section>

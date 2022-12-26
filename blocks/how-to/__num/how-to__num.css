@@ -1,0 +1,10 @@
+.how-to__num {
+  position: absolute;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 131px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #F9BDBD40;
+  margin: 23px 0 23px 10px;
+}

@@ -1,0 +1,7 @@
+.header {
+  max-width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}

@@ -1,0 +1,9 @@
+.about-us__woodies {
+  display: flex;
+  min-height: 388px;
+  margin: 40px 0;
+  background-image: url(../../../images/yellowRectangle.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  align-items: center;
+}

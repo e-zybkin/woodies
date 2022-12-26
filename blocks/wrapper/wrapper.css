@@ -1,0 +1,7 @@
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  max-width: 1152px;
+  margin: 0 auto;
+  color: #000000;
+}

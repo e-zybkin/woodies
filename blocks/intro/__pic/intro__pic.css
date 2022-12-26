@@ -1,0 +1,8 @@
+.intro__pic {
+  z-index: 1;
+  width: 568px;
+  height: 577px;
+  position: absolute;
+  bottom: 58px;
+  right: 0;
+}
