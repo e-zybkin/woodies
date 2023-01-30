@@ -1,0 +1,8 @@
+.categories__card-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  column-gap: 56px;
+  row-gap: 40px;
+  justify-content: center;
+	margin-top: 40px;
+}

@@ -1,0 +1,8 @@
+.footer__content-box {
+  display: flex;
+  max-width: 709px;
+  min-height: 162px;
+  border-top: 1px solid black;
+  margin-top: 208px;
+  margin-left: 108px;
+}

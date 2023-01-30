@@ -40,6 +40,7 @@
 @import url(../blocks/categories/__card/categories__card.css);
 @import url(../blocks/categories/__card-title/categories__card-title.css);
 @import url(../blocks/categories/__card-pic/categories__card-pic.css);
+@import url(../blocks/categories/__card-pic/_table/categories__card-pic_table.css);
 @import url(../blocks/categories/__card-button/categories__card-button.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__content-box/footer__content-box.css);
@@ -51,3 +52,4 @@
 @import url(../blocks/footer/__title/footer__title.css);
 @import url(../blocks/footer/__column-item/footer__column-item.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
+@import url(../blocks/buttons/buttons.css);

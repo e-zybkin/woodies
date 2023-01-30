@@ -1,0 +1,8 @@
+.footer__column {
+  padding: 0;
+  margin-right: 49px;
+}
+
+.footer__column:last-of-type {
+  margin-right: 0;
+}

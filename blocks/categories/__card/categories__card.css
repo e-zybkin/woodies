@@ -1,0 +1,23 @@
+.categories__card {
+  position: relative;
+  max-width: 280px;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.categories__card:nth-of-type(3n+1) {
+  background-image: url(../../../images/cardPinkRectangle.png);
+}
+
+.categories__card:nth-of-type(3n+2) {
+  background-image: url(../../../images/cardYellowRectangle.png);
+}
+
+.categories__card:nth-of-type(3n+3) {
+  background-image: url(../../../images/cardBlueRectangle.png);
+}
