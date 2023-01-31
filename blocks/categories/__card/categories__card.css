@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: space-between;
+  transition: transform 0.25s linear;
 }
 
 .categories__card:nth-of-type(3n+1) {
@@ -20,4 +21,8 @@
 
 .categories__card:nth-of-type(3n+3) {
   background-image: url(../../../images/cardBlueRectangle.png);
+}
+
+.categories__card:hover {
+  transform: scale(1.03);
 }

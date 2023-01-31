@@ -13,3 +13,10 @@
   margin: 0;
   font-weight: 800;
 }
+
+.header__nav-item:active,
+.header__nav-item:hover,
+.header__nav-item {
+  text-decoration: none;
+  color: rgba(34, 34, 34, 0.75);
+}

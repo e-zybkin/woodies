@@ -1,5 +1,7 @@
 .header__nav-tab {
+  display: flex;
   margin-left: 109px;
   max-width: 430px;
   min-height: 22px;
+  padding-top: 10px;
 }

@@ -19,16 +19,14 @@
           <h1 class="header__title">WOODIES</h1>
 
           <nav class="header__nav-tab">
-            <ul class="header__nav-items">
-              <li class="header__nav-item buttons">Home</li>
-              <li class="header__nav-item buttons">About Us</li>
-              <li class="header__nav-item buttons">How it works</li>
-              <li class="header__nav-item buttons">Categories</li>
-            </ul>
+            <a class="header__nav-item buttons" href="#home">Home</a>
+            <a class="header__nav-item buttons" href="#about">About Us</a>
+            <a class="header__nav-item buttons" href="#how">How it works</a>
+            <a class="header__nav-item buttons" href="#categories">Categories</a>
           </nav>
         </header>
         <main>
-          <section class="intro section">
+          <section class="intro section" id="home">
             <div class="intro__textbox">
               <p class="intro__slogan">Are you looking for <b>woodden furniture</b> for your place?</p>
               <h1 class="intro__title">This is the Right Place</h1>
@@ -46,7 +44,7 @@
             >
           </section>
 
-          <section class="about-us section">
+          <section class="about-us section" id="about">
             <div class="section__title-box">
               <h2 class="section__title">Who we are</h2>
               <p class="section__subtitle">ABOUT US</p>
@@ -78,7 +76,7 @@
 
           </section>
 
-          <section class="how-to section">
+          <section class="how-to section" id="how">
             <div class="section__title-box">
               <h2 class="section__title">How to custom</h2>
               <p class="section__subtitle">HOW IT WORKS</p>
@@ -128,7 +126,7 @@
             <button class="how-to__button buttons">Get Personalized Now</button>
           </section>
 
-          <section class="categories section">
+          <section class="categories section" id="categories">
             <div class="section__title-box">
               <h2 class="section__title">What we have</h2>
               <p class="section__subtitle">CATEGORIES</p>
@@ -142,7 +140,7 @@
                   src="./images/table.png"
                   alt="стол"
                 >
-                <button class="categories__card-button buttons">Shop Now</button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
 
 							<div class="categories__card">
@@ -152,7 +150,7 @@
                   src="./images/chair.png"
                   alt="стул"
                 >
-                <button class="categories__card-button buttons">Shop Now</button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
 
 							<div class="categories__card">
@@ -162,7 +160,7 @@
                   src="./images/Bowls.png"
                   alt="тарелки"
                 >
-                <button class="categories__card-button buttons">Shop Now</button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
 
 							<div class="categories__card">
@@ -172,7 +170,7 @@
                   src="./images/bookcase.png"
                   alt="книжный шкаф"
                 >
-                <button class="categories__card-button buttons">Shop Now</button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
 
 							<div class="categories__card">
@@ -182,7 +180,7 @@
                   src="./images/radio.png"
                   alt="радиоприёмник"
                 >
-                <button class="categories__card-button buttons">Shop Now</button>
+                <button class="categories__card-button">Shop Now</button>
               </div>
             </div>
           </section>
@@ -244,5 +242,6 @@
         </footer>
       </div>
     </div>
+    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>
