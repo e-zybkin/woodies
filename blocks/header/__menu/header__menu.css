@@ -1,0 +1,7 @@
+.header__menu {
+  top: 22px;
+  left: 38px;
+  position: absolute;
+  display: flex;
+  transition: top 0.5s linear;
+}
