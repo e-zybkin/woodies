@@ -1,7 +1,17 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
 
-const func = () => {
-  console.log('здесь будет функция, открывающая меню а-ля бургер')
+const func = (e) => {
+  if(!e.target.classList.contains('header__picture_burger_opened')) {
+    e.target.classList.add('header__picture_burger_opened')
+    document.querySelector('.header__menu').style.top = '22px';
+    document.querySelector('.header').style.width = '1152px'
+    document.querySelector('.header').style.backdropFilter = 'blur(5px)';
+  } else {
+    e.target.classList.remove('header__picture_burger_opened')
+    document.querySelector('.header__menu').style.top = '-80px';
+    document.querySelector('.header').style.width = ''
+    document.querySelector('.header').style.backdropFilter = '';
+  }
 }
 
 const scaleToFunc = (e) => {
@@ -28,8 +38,6 @@ window.addEventListener("scroll", bringmenu);
 function bringmenu() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       document.querySelector('.header__menu').style.top = '-80px';
-      //document.querySelector('.header__picture').style.left = '-50px';
-      //document.querySelector('.header__picture').style.transform = 'rotate(-180deg)';
       document.querySelector('.header__picture').style.animation = 'moveStart 1s forwards, rotationStart 1s forwards';
       if (!document.querySelector('.header__picture').classList.contains('header__picture_type_burger')) {
         document.querySelector('.header__picture').addEventListener('click', func)
@@ -37,10 +45,12 @@ function bringmenu() {
         document.querySelector('.header__picture_type_burger').addEventListener('mouseenter', scaleToFunc)
         document.querySelector('.header__picture_type_burger').addEventListener('mouseleave', scaleBackFunc)
       }
+      if(document.querySelector('.header__picture').classList.contains('header__picture_burger_opened')) {
+        document.querySelector('.header__picture').classList.remove('header__picture_burger_opened')
+        document.querySelector('.header').style.backdropFilter = '';
+      }
     } else {
       document.querySelector('.header__menu').style.top = '22px'
-      //document.querySelector('.header__picture').style.left = '0';
-      //document.querySelector('.header__picture').style.transform = 'rotate(-0deg)';
       document.querySelector('.header__picture').style.animation = 'moveEnd 0.65s forwards , rotationEnd 0.65s forwards';
       if (document.querySelector('.header__picture').classList.contains('header__picture_type_burger')) {
         document.querySelector('.header__picture').removeEventListener('click', func)
@@ -51,38 +61,36 @@ function bringmenu() {
     }
 }
 
+const sections = document.querySelectorAll('.section');
+const menuItems = document.querySelectorAll('.header__nav-item');
 
-/*let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos < currentScrollPos) {
-    document.querySelector('.header__menu').style.top = '-80px';
-    document.querySelector('.header__picture').style.animation = 'moveStart 1s forwards, rotationStart 1s forwards';
-    if (!document.querySelector('.header__picture').classList.contains('bMenu')) {
-      document.querySelector('.header__picture').classList.add('bMenu');
-      document.querySelector('.header__picture').addEventListener('click', func)
-      document.querySelector('.header__picture').addEventListener('mouseenter', (e) => {
-        e.target.style.transform = `${transform} scale(1.5)`
-      })
-      document.querySelector('.header__picture').addEventListener('mouseleave', (e) => {
-        e.target.style.transform = 'scale(1)';
-      })
+const isInViewport = function (element) {
+  const top = element.offsetTop;
+  const bottom = top + element.offsetHeight;
+  const viewportTop = window.scrollY;
+  const viewportBottom = viewportTop + window.innerHeight;
+
+  return top <= viewportBottom && bottom >= viewportTop;
+};
+
+const toggleActiveClass = function () {
+  let currentSection = null;
+
+  sections.forEach((section, i) => {
+    if (isInViewport(section)) {
+      if (currentSection == null) {
+        currentSection = i;
+      }
     }
-    //document.querySelector('.header__menu').style.opacity = '0'
-  } else if (prevScrollpos == currentScrollPos) {
-    document.querySelector('.header__menu').style.top = '22px'
-    document.querySelector('.header__picture').style.animation = 'moveEnd 0.65s forwards , rotationEnd 0.65s forwards';
-    //document.querySelector('.header__menu').style.opacity = '1'
-    if (document.querySelector('.header__picture').classList.contains('bMenu')) {
-      document.querySelector('.header__picture').classList.remove('bMenu')
-      document.querySelector('.header__picture').removeEventListener('click', func)
-      document.querySelector('.header__picture').removeEventListener('mouseenter', (e) => {
-        e.target.style.transform = 'scale(1.5)';
-      })
-      document.querySelector('.header__picture').removeEventListener('mouseleave', (e) => {
-        e.target.style.transform = 'scale(1)';
-      })
-    }
+  });
+
+  menuItems.forEach((item) => {
+    item.classList.remove('header__nav-item_active');
+  });
+
+  if (currentSection !== null) {
+    menuItems[currentSection].classList.add('header__nav-item_active');
   }
-  //prevScrollpos = currentScrollPos;
-}*/
+};
+
+window.addEventListener('scroll', toggleActiveClass);

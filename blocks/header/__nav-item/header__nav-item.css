@@ -10,9 +10,7 @@
 }
 
 .header__nav-item:nth-of-type(1) {
-  color: #DAA520;
   margin: 0;
-  font-weight: 800;
 }
 
 .header__nav-item:active,
