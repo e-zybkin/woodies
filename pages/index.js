@@ -1,79 +1,80 @@
-const anchors = document.querySelectorAll('a[href*="#"]');
+import {headerConfig} from '../scripts/utils/constants.js';
+import {animationConfig} from '../scripts/utils/constants.js';
+import {
+  headerSelector,
+  menuSelector,
+  logoSelector,
+  sections,
+  menuItems,
+  anchors
+} from '../scripts/utils/constants.js'
 
 const func = (e) => {
-  if(!e.target.classList.contains('header__picture_burger_opened')) {
-    e.target.classList.add('header__picture_burger_opened')
-    document.querySelector('.header__menu').style.top = '22px';
-    document.querySelector('.header').style.width = '1152px'
-    document.querySelector('.header').style.backdropFilter = 'blur(5px)';
+  if(!e.target.classList.contains(headerConfig.openedMenu)) {
+    e.target.classList.add(headerConfig.openedMenu)
+    menuSelector.style.top = '22px';
+    headerSelector.style.width = '1152px'
+    headerSelector.style.backdropFilter = 'blur(5px)';
   } else {
-    e.target.classList.remove('header__picture_burger_opened')
-    document.querySelector('.header__menu').style.top = '-80px';
-    document.querySelector('.header').style.width = ''
-    document.querySelector('.header').style.backdropFilter = '';
+    e.target.classList.remove(headerConfig.openedMenu)
+    menuSelector.style.top = '-80px';
+    headerSelector.style.width = ''
+    headerSelector.style.backdropFilter = '';
   }
 }
 
 const scaleToFunc = (e) => {
-  e.target.style.animation = 'moveStart 1s forwards, rotationStart 1s forwards, scaleStart 1s forwards'
+  e.target.style.animation = animationConfig.scaleTo;
 }
 
 const scaleBackFunc = (e) => {
-  e.target.style.animation = 'moveStart 1s forwards, rotationStart 1s forwards, scaleEnd 1s forwards'
+  e.target.style.animation = animationConfig.scaleBack;
 }
 
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    const blockID = anchor.getAttribute('href');
-    document.querySelector('' + blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
+const logoToButton = () => {
+  logoSelector.classList.add(headerConfig.burgerMenu)
+  logoSelector.addEventListener('click', func)
+  logoSelector.addEventListener('mouseenter', scaleToFunc)
+  logoSelector.addEventListener('mouseleave', scaleBackFunc)
 }
 
-window.addEventListener("scroll", bringmenu);
+const buttonToLogo = () => {
+  logoSelector.removeEventListener('click', func)
+  logoSelector.removeEventListener('mouseenter', scaleToFunc)
+  logoSelector.removeEventListener('mouseleave', scaleBackFunc)
+  logoSelector.classList.remove(headerConfig.burgerMenu)
+}
 
 function bringmenu() {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      document.querySelector('.header__menu').style.top = '-80px';
-      document.querySelector('.header__picture').style.animation = 'moveStart 1s forwards, rotationStart 1s forwards';
-      if (!document.querySelector('.header__picture').classList.contains('header__picture_type_burger')) {
-        document.querySelector('.header__picture').addEventListener('click', func)
-        document.querySelector('.header__picture').classList.add('header__picture_type_burger')
-        document.querySelector('.header__picture_type_burger').addEventListener('mouseenter', scaleToFunc)
-        document.querySelector('.header__picture_type_burger').addEventListener('mouseleave', scaleBackFunc)
-      }
-      if(document.querySelector('.header__picture').classList.contains('header__picture_burger_opened')) {
-        document.querySelector('.header__picture').classList.remove('header__picture_burger_opened')
-        document.querySelector('.header').style.backdropFilter = '';
-      }
-    } else {
-      document.querySelector('.header__menu').style.top = '22px'
-      document.querySelector('.header__picture').style.animation = 'moveEnd 0.65s forwards , rotationEnd 0.65s forwards';
-      if (document.querySelector('.header__picture').classList.contains('header__picture_type_burger')) {
-        document.querySelector('.header__picture').removeEventListener('click', func)
-        document.querySelector('.header__picture_type_burger').removeEventListener('mouseenter', scaleToFunc)
-        document.querySelector('.header__picture_type_burger').removeEventListener('mouseleave', scaleBackFunc)
-        document.querySelector('.header__picture').classList.remove('header__picture_type_burger')
-      }
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    menuSelector.style.top = '-80px';
+    logoSelector.style.animation = animationConfig.logoMove;
+    if (!logoSelector.classList.contains(headerConfig.burgerMenu)) {
+      logoToButton();
     }
+    if(logoSelector.classList.contains(headerConfig.openedMenu)) {
+      logoSelector.classList.remove(headerConfig.openedMenu)
+      headerSelector.style.backdropFilter = '';
+    }
+  } else {
+    menuSelector.style.top = '22px'
+    logoSelector.style.animation = animationConfig.logoBack;
+    if (logoSelector.classList.contains(headerConfig.burgerMenu)) {
+      buttonToLogo();
+    }
+  }
 }
 
-const sections = document.querySelectorAll('.section');
-const menuItems = document.querySelectorAll('.header__nav-item');
-
-const isInViewport = function (element) {
-  const top = element.offsetTop;
-  const bottom = top + element.offsetHeight;
+function isInViewport(item) {
+  const top = item.offsetTop;
+  const bottom = top + item.offsetHeight;
   const viewportTop = window.scrollY;
   const viewportBottom = viewportTop + window.innerHeight;
 
   return top <= viewportBottom && bottom >= viewportTop;
 };
 
-const toggleActiveClass = function () {
+function toggleActiveClass() {
   let currentSection = null;
 
   sections.forEach((section, i) => {
@@ -93,4 +94,18 @@ const toggleActiveClass = function () {
   }
 };
 
-window.addEventListener('scroll', toggleActiveClass);
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
+
+window.addEventListener('scroll', () => {
+  bringmenu();
+  toggleActiveClass();
+});
