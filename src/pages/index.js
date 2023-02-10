@@ -1,3 +1,5 @@
+import './index.css';
+
 import {headerConfig} from '../scripts/utils/constants.js';
 import {animationConfig} from '../scripts/utils/constants.js';
 import {

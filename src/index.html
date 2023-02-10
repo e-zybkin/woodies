@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <title>Woodies</title>
   </head>
@@ -13,7 +12,7 @@
         <header class="header">
           <img
             class="header__picture"
-            src="./images/logo.png"
+            src="<%=require('./images/logo.png')%>"
             alt="логотип"
           >
           <div class="header__menu">
@@ -36,12 +35,12 @@
             </div>
             <img
               class="intro__pic"
-              src="./images/coffeTable.png"
+              src="<%=require('./images/coffeTable.png')%>"
               alt="кофейный столик"
             >
             <img
               class="intro__back"
-              src="./images/bigPinkRectangle.png"
+              src="<%=require('./images/bigPinkRectangle.png')%>"
               alt="розовый прямоугольник"
             >
           </section>
@@ -55,7 +54,7 @@
             <div class="about-us__woodies">
               <img
                 class="about-us__salad-pic"
-                src="./images/saladBowlSet.png"
+                src="<%=require('./images/saladBowlSet.png')%>"
                 alt="чашки с салатом"
               >
               <div class="about-us__woodies-textbox">
@@ -71,7 +70,7 @@
               </div>
               <img
                 class="about-us__spoon-pic"
-                src="./images/spoonSet.png"
+                src="<%=require('./images/spoonSet.png')%>"
                 alt="комплект ложек"
               >
             </div>
@@ -88,7 +87,7 @@
                 <p class="how-to__num">1</p>
                 <img
                   class="how-to__pic"
-                  src="./images/shop.png"
+                  src="<%=require('./images/shop.png')%>"
                   alt="интернет магазин"
                 >
                 <p class="how-to__text">Choose Design</p>
@@ -98,7 +97,7 @@
                 <p class="how-to__num">2</p>
                 <img
                   class="how-to__pic"
-                  src="./images/ruler.png"
+                  src="<%=require('./images/ruler.png')%>"
                   alt="угол"
                 >
                 <p class="how-to__text">Area measuring</p>
@@ -108,7 +107,7 @@
                 <p class="how-to__num">3</p>
                 <img
                   class="how-to__pic"
-                  src="./images/cost.png"
+                  src="<%=require('./images/cost.png')%>"
                   alt="ведение бюджета"
                 >
                 <p class="how-to__text">Budgeting</p>
@@ -118,7 +117,7 @@
                 <p class="how-to__num">4</p>
                 <img
                   class="how-to__pic"
-                  src="./images/carpenter.png"
+                  src="<%=require('./images/carpenter.png')%>"
                   alt="столяр"
                 >
                 <p class="how-to__text">Production</p>
@@ -138,7 +137,7 @@
                 <h3 class="categories__card-title">Desk</h3>
                 <img
                   class="categories__card-pic categories__card-pic_table"
-                  src="./images/table.png"
+                  src="<%=require('./images/table.png')%>"
                   alt="стол"
                 >
                 <button class="categories__card-button">Shop Now</button>
@@ -148,7 +147,7 @@
                 <h3 class="categories__card-title">Chair</h3>
                 <img
                   class="categories__card-pic"
-                  src="./images/chair.png"
+                  src="<%=require('./images/chair.png')%>"
                   alt="стул"
                 >
                 <button class="categories__card-button">Shop Now</button>
@@ -158,7 +157,7 @@
                 <h3 class="categories__card-title">Kitchenware</h3>
                 <img
                   class="categories__card-pic"
-                  src="./images/Bowls.png"
+                  src="<%=require('./images/Bowls.png')%>"
                   alt="тарелки"
                 >
                 <button class="categories__card-button">Shop Now</button>
@@ -168,7 +167,7 @@
                 <h3 class="categories__card-title">Book Shelf</h3>
                 <img
                   class="categories__card-pic"
-                  src="./images/bookcase.png"
+                  src="<%=require('./images/bookcase.png')%>"
                   alt="книжный шкаф"
                 >
                 <button class="categories__card-button">Shop Now</button>
@@ -178,7 +177,7 @@
                 <h3 class="categories__card-title">Electronics</h3>
                 <img
                   class="categories__card-pic"
-                  src="./images/radio.png"
+                  src="<%=require('./images/radio.png')%>"
                   alt="радиоприёмник"
                 >
                 <button class="categories__card-button">Shop Now</button>
@@ -193,7 +192,7 @@
 							<li class="footer__column-header footer__column-header_type_intro">
 								<img
 									class="footer__logo"
-									src="./images/logo.png"
+									src="<%=require('./images/logo.png')%>"
 									alt="логотип"
 								>
 								<h2 class="footer__title">WOODIES</h2>
@@ -243,6 +242,5 @@
         </footer>
       </div>
     </div>
-    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>
