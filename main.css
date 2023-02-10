@@ -1,0 +1,58 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
+@font-face{font-display:swap;font-family:Nunito;font-style:normal;font-weight:400;src:url(4409dddea30021be6982.woff2) format("woff2"),url(32d98bf516a0bb793c6a.woff) format("woff")}@font-face{font-display:swap;font-family:Nunito;font-style:normal;font-weight:700;src:url(9452a0da7cf5a7bf2782.woff2) format("woff2"),url(be318c3584968249cc15.woff) format("woff")}@font-face{font-display:swap;font-family:Nunito;font-style:normal;font-weight:900;src:url(dc6ba9ac70dbbeedd06e.woff2) format("woff2"),url(9bf0689a5d23ef44b1d0.woff) format("woff")}@font-face{font-display:swap;font-family:Nunito;font-style:normal;font-weight:500;src:url(405b6ce1b679601fe5a0.woff2) format("woff2"),url(d7e200278e48600db978.woff) format("woff")}
+.page{background-color:#fff;font-family:Nunito,Arial,sans-serif;min-height:100vh;min-width:320px}
+.wrapper{color:#000;margin:0 auto;max-width:1152px;min-width:320px;position:relative}
+.header{align-items:center;display:flex;margin-left:80px;max-width:100%;min-height:80px;position:fixed;top:0;transition:-webkit-backdrop-filter .5s linear;transition:backdrop-filter .5s linear;transition:backdrop-filter .5s linear,-webkit-backdrop-filter .5s linear;z-index:3}
+.header__picture{height:30px;position:absolute;width:30px}@keyframes moveStart{0%{left:0}to{left:-50px}}@keyframes rotationStart{0%{transform:rotate(0deg)}to{transform:rotate(-180deg)}}@keyframes moveEnd{0%{left:-50px}to{left:0}}@keyframes rotationEnd{0%{transform:rotate(-180deg)}to{transform:rotate(0deg)}}
+@keyframes scaleStart{0%{transform:scale(1)}to{transform:scale(1.3)}}@keyframes scaleEnd{0%{transform:scale(1.3)}to{transform:scale(1)}}
+.header__menu{display:flex;left:38px;position:absolute;top:22px;transition:top .5s linear}
+.header__title{color:#3e3f43;font-size:24px;font-weight:700;letter-spacing:.25em;line-height:33px;margin:0;padding-top:4px;text-align:left}
+.header__nav-tab{display:flex;margin-left:109px;max-width:430px;min-height:22px;padding-top:10px}
+.header__nav-item{font-size:16px;font-weight:400;letter-spacing:0;line-height:22px;margin-left:48px;text-align:left;white-space:nowrap;z-index:1}.header__nav-item:first-of-type{margin:0}.header__nav-item,.header__nav-item:active,.header__nav-item:hover{color:rgba(34,34,34,.75);text-decoration:none}
+.header__nav-item_active{color:#daa520;font-weight:800}
+.section{box-sizing:border-box;margin-top:120px;padding-left:100px;padding-right:100px;position:relative}
+.section__title-box{align-items:center;display:flex;justify-content:space-between;min-height:98px;width:100%}
+.section__title{color:#3e3f43;font-size:36px;font-weight:700;letter-spacing:0;line-height:49px;margin:0;text-align:left}
+.section__subtitle{color:#2222221a;font-size:72px;font-weight:800;letter-spacing:0;line-height:98px;margin:0;text-align:right}
+.intro{display:flex;margin-top:165px;min-height:635px;position:relative}
+.intro__textbox{display:flex;flex-direction:column;margin-top:52px;max-width:504px;min-height:376px}
+.intro__slogan{color:#3e3f43;font-family:Nunito;font-size:36px;font-weight:400;letter-spacing:0;line-height:49px;margin:0 0 16px;text-align:left;z-index:2}
+.intro__title{color:#313235;font-size:72px;font-weight:700;letter-spacing:0;line-height:98px;margin:0 0 16px;text-align:left;z-index:2}
+.intro__button{background-color:#daa520;border:none;border-radius:4px;color:#fff;height:50px;width:175px}
+.intro__pic{bottom:58px;height:577px;position:absolute;right:0;width:568px;z-index:1}
+.intro__back{bottom:0;position:absolute;right:0}
+.about-us{display:flex;flex-direction:column}
+.about-us__woodies{align-items:center;background-image:url(5552700f9f255463c4e5.png);background-position:0;background-repeat:no-repeat;display:flex;margin:40px 0;min-height:388px}
+.about-us__woodies-textbox{margin-left:76px;max-width:450px;min-height:180px}
+.about-us__custom{align-items:center;display:flex;min-height:384px;width:100%}
+.about-us__custom-textbox{max-width:670px;min-height:131px}
+.about-us__salad-pic{height:306px;margin-top:82px;padding-left:38px;width:388px}
+.about-us__spoon-pic{height:384px;position:absolute;right:0;width:287px}
+.about-us__slogan{color:#3e3f43;font-size:36px;font-weight:600;letter-spacing:0;line-height:49px;margin:0 0 16px;position:relative;text-align:left;z-index:2}
+.about-us__text{font-size:24px;font-weight:600;letter-spacing:0;line-height:33px;margin:0;position:relative;text-align:left;z-index:2}
+.how-to{display:flex;flex-direction:column}
+.how-to__steps-box{display:grid;grid-template-columns:repeat(4,1fr);margin:64px 0}
+.how-to__step-card{position:relative;text-align:center}
+.how-to__num{color:#f9bdbd40;font-size:96px;font-weight:600;letter-spacing:0;line-height:131px;margin:23px 0 23px 10px;position:absolute;text-align:center}
+
+.how-to__text{font-size:24px;font-weight:700;letter-spacing:0;line-height:33px;text-align:center}
+.how-to__button{align-self:center;background-color:#daa520;border:none;border-radius:4px;color:#fff;height:50px;width:212px}
+.categories{margin-bottom:120px}
+.categories__card-box{-moz-column-gap:56px;column-gap:56px;display:grid;grid-template-columns:repeat(auto-fit,280px);justify-content:center;margin-top:40px;row-gap:40px}
+.categories__card{align-items:baseline;background-repeat:no-repeat;background-size:contain;display:flex;flex-direction:column;justify-content:space-between;max-width:280px;min-height:400px;position:relative;transition:transform .25s linear}.categories__card:nth-of-type(3n+1){background-image:url(b036e1eaa650c3f6df4a.png)}.categories__card:nth-of-type(3n+2){background-image:url(bac685959d3c5ab30da5.png)}.categories__card:nth-of-type(3n+3){background-image:url(c75ecd2ec685c3dded7f.png)}.categories__card:hover{transform:scale(1.03)}
+.categories__card-title{color:#3e3f43;font-size:24px;font-weight:800;left:16px;letter-spacing:0;line-height:33px;margin:0;position:absolute;text-align:center;top:24px}
+.categories__card-pic{margin:auto}
+.categories__card-pic_table{margin-left:0}
+.categories__card-button{background:none;border-radius:4px;bottom:24px;height:40px;position:absolute;right:16px;transition:background-color .25s linear;transition:color .2s linear;width:123px}.categories__card-button:hover{background-color:#000;color:#fff}
+.footer{background-color:#f3f1f1;background-image:url(b960a81f5467d0aef418.png);background-position:100%;background-repeat:no-repeat;background-size:contain;display:flex;flex-direction:column;min-height:455px}
+.footer__content-box{border-top:1px solid #000;display:flex;margin-left:108px;margin-top:208px;max-width:709px;min-height:162px}
+.footer__column{margin-right:49px;padding:0}.footer__column:last-of-type{margin-right:0}
+.footer__column-header{list-style-type:none}
+.footer__column-header_type_intro{display:flex}
+.footer__column-header_type_other{color:#333;font-size:18px;font-weight:600;letter-spacing:0;line-height:25px;margin-top:10px;text-align:left}
+.footer__logo{height:30px;width:30px}
+.footer__title{font-size:24px;font-weight:700;letter-spacing:.25em;line-height:33px;margin:2px 0 0 8px;text-align:left}
+.footer__column-item{color:#8d8d8d;font-size:14px;font-weight:400;letter-spacing:0;line-height:19px;list-style-type:none;margin-top:16px;text-align:left}
+.footer__copyright{align-self:center;color:#8d8d8d;font-size:12px;font-weight:600;letter-spacing:0;line-height:16px;margin-bottom:24px;margin-top:45px;text-align:left}
+.buttons{cursor:pointer;transition:opacity .25s linear}.buttons:hover{opacity:.6}
+
